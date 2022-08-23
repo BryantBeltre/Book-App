@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BookApp.Models.BookModel>
+
+@{
+    ViewData["Title"] = "Libreria";
+}
+
+<h1>Libreria</h1>
+
+
+   
+
+
+<div class="list-main">
+    <div class="float-div">
+        <a class="btn btn-primary float" asp-action="Create"><span class="material-icons iconadd">add</span></a>
+    </div>
+    <div class="cards-div">
+@foreach (var item in Model) {
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Author)</h6>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Sinopsis)</p>
+                    <a href="#" class="card-link">Disponible(@Html.DisplayFor(modelItem => item.Stock))</a>
+  </div>
+</div>
+    
+           
+          
+}
+    </div>
+
+</div>
