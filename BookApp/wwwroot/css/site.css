@@ -1,6 +1,8 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
+* {
+    font-family: rubik;
+}
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -11,6 +13,14 @@ a.navbar-brand {
     margin-left: 0 !important;
 
 }
+.details {
+    min-height: 565px;
+    display: flex;
+    background-color: white;
+    border-radius: 3%;
+    width: 70%;
+    padding: 0;
+}
 @media only screen and (min-width: 1200px) {
 .container{
     max-width: 1693px !important;
@@ -18,7 +28,10 @@ a.navbar-brand {
 }
 .cards-div {
     min-height: 560px;
-   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 }
 .list-main {
@@ -30,15 +43,47 @@ body{
 }
 .card-text {
     overflow: hidden;
-    max-height: 81px;
+    max-height: 46px;
 }
  h1{
-     color:white;
+     color:red !important;
  }
+ .form-control{
+     width: 50% !important;
+    margin-top: 5px;
+ }
+.input-group,.form-control {
+    background-color: #ff0202;
+    border: 2px solid #dcdcdc;
+    padding: 7px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: white;
+}
+.input-group::placeholder, .form-control::placeholder{
+    color: white;
+}
+.input-group:hover, .form-control:hover{
+    background-color: white;
+    color: black;
+}
+    .input-group:hover::placeholder,.footer:hover::placeholder {
+        color: black;
+    }
+.btn-danger {
+    background-color: #ff0202 !important;
+    border-radius: 15px !important;
+}
+.btn-danger:hover{
+    background-color: white !important;
+    color: black;
+}
 main {
-  
     min-height: 683px;
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .iconadd {
     font-size: 34px !important;
@@ -47,6 +92,20 @@ main {
     display: flex;
     justify-content:flex-end;
 }
+.row{
+    justify-content: center !important;
+}
+.col-md-4 {
+    background-color: white !important;
+    min-width: 500px !important;
+    border-radius: 8% !important;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .float {
     border-radius: 100%;
     max-width: 50px !important;
@@ -54,16 +113,79 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: red !important;
 }
  footer{
      background-color: white;
  }
 .card {
-    height: 20%;
+    height: 226px;
+    min-width: 19rem;
+    margin-bottom: 20px;
+}
+.image-part,.login-part{
+width: 50% !important;
+
+}
+.box-login,.details-box {
+    min-width: 80%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h6 {
+    font-size: 14px;
+    padding: 40px;
+    color: #ff0202;
+}
+.sinopsis {
+    padding: 25px;
+}
+.qr{
+    display: none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.box-login > h1{
+    color: black;
+}
+.login-part,.details-part {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+}
+.details-part{
+    flex-direction: column;
+}
+
+.image-part {
+    background-image: url("../image/BooksApp.png");
+    border-right: 1px solid #80808036;
+    border-radius: 3%;
+}
+.modal-body {
+    display: flex;
+    min-height: 560px;
+    min-width: 650px;
+    padding: 0rem;
+}
+.modal-content{
+    border-radius: 3%;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1055px !important;
+        margin: 1.75rem auto;
+    }
 }
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+    a {
+    color: #0366d6;
 }
 
 .btn-primary {
