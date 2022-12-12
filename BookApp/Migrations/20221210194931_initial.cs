@@ -2,7 +2,7 @@
 
 namespace BookApp.Migrations
 {
-    public partial class v1 : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,11 +12,11 @@ namespace BookApp.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Sinopsis = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Stock = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Sinopsis = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Stock = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

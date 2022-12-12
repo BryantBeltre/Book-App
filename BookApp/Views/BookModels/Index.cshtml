@@ -4,7 +4,7 @@
     ViewData["Title"] = "Libreria";
 }
 
-<h1>Libreria</h1>
+<h1 class="text-black">Book Store</h1>
 
 
 
@@ -12,20 +12,23 @@
 
 <div class="list-main">
     <div class="float-div">
-        <a class="btn btn-primary float changeonlogin" asp-action="Create"><span class="material-icons iconadd">add</span></a>
+        <a class="btn btn-dark float changeonlogin" asp-action="Create"><span class="material-icons iconadd">add</span></a>
     </div>
     <div class="cards-div">
         @foreach (var item in Model)
         {
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow-sm" style="width: 18rem;">
+                <img class="bd-placeholder-img card-img-top img-book-size" src="@Html.DisplayFor(modelItem => item.UrlImg)" />
                 <div class="card-body">
+
                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Author)</h6>
+                    <h6 class="card-subtitle mb-2">@Html.DisplayFor(modelItem => item.Author)</h6>
                     <p class="card-text">@Html.DisplayFor(modelItem => item.Sinopsis)</p>
+
                     <div class="card-footer">
-                    <a asp-action="Details" asp-route-id="@item.Id" class="card-link  changeonnologin">Disponible(@Html.DisplayFor(modelItem => item.Stock))</a>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="card-link changeonlogin">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="card-link changeonlogin">Eliminar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-primary changeonnologin">Available(@Html.DisplayFor(modelItem => item.Stock))</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary changeonlogin">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger changeonlogin">Delete</a>
                     </div>
                 </div>
             </div>

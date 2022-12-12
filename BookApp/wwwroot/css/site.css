@@ -3,10 +3,28 @@ for details on configuring this project to bundle and minify static web assets. 
 * {
     font-family: rubik;
 }
+
+.img-book-size{
+    height: 250px;
+}
+.card-title{
+    color: black;
+    font-weight:bold;
+}
+.card-subtitle{
+    color:white;
+   
+}
+.card-text{
+    color: black;
+    font-weight:bold;
+}
+
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 .container {
     margin-right: 0 !important;
@@ -39,21 +57,19 @@ a.navbar-brand {
 }
 
 body{
-    background-image: url("../image/books.jpg");
+    background-image: url("../image/fondo.jpg");
 }
 .card-text {
     overflow: hidden;
     max-height: 46px;
 }
- h1{
-     color:red !important;
- }
+
  .form-control{
      width: 50% !important;
     margin-top: 5px;
  }
 .input-group,.form-control {
-    background-color: #ff0202;
+    background-color: gray;
     border: 2px solid #dcdcdc;
     padding: 7px;
     margin-bottom: 20px;
@@ -113,7 +129,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red !important;
+    background-color: orange !important;
 }
  footer{
      background-color: white;
@@ -164,7 +180,7 @@ width: 50% !important;
 }
 
 .image-part {
-    background-image: url("../image/BooksApp.png");
+    background-image:url("../image/Libreria.png");
     border-right: 1px solid #80808036;
     border-radius: 3%;
 }

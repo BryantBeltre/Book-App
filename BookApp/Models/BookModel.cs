@@ -13,6 +13,8 @@ namespace BookApp.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "El nombre del libro es requerido")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "La url de la imagen del libro es requerido")]
+        public string UrlImg { get; set; }
         [Required(ErrorMessage = "El autor del libro es requerido")]
         public string Author { get; set; }
         [Required(ErrorMessage = "La  sinipsis del libro es requerida")]

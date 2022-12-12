@@ -11,17 +11,17 @@
          </div>
          <div class="login-part details-part">
              <div class=" details-box">
-               <h3>Listo para comprar?</h3>
+               <h3>Scan for Buy</h3>
            <p> <span id="bookname">@Html.DisplayFor(model => model.Name)</span> <span id="bookautor">@Html.DisplayFor(model => model.Author)</span></p>
             <span>Sinopsis:</span>
             <p class="sinopsis">@Html.DisplayFor(model => model.Sinopsis)</p>       
             
-            <button class="btn btn-danger" onclick="buy()">Comprar este libro</button>
+            <button class="btn btn-dark" onclick="buy()">Comprar este libro</button>
             <div></div>
-            <h6 class="h6">Importante: *Si decides comprar este libro debes de tener en cuenta que su precio es de <span id="bookprice">@Html.DisplayFor(model => model.Price)</span> pesos dominicanos, y que, una vez comprado se te generara un codigo el cual llevaras a la libreria para que te entreguen el libro.* </h6>
+            <h6 class="h6"> Pasar por la tienda con un monto de <span id="bookprice">@Html.DisplayFor(model => model.Price)</span>.00 pesos dominicanos. </h6>
              </div>
              <div class="qr sinopsis">
-            <h3>Compra realizada</h3>
+            <h3>Book Ready</h3>
             <p>Impreme este codigo y muestralo como prueba de que apartaste el libro, recuerda llevar @Html.DisplayFor(model => model.Price) pesos dominicanos, para que tu libro pueda ser entregado. </p>
         <img alt="Código QR" id="qrcode">
         </div>
